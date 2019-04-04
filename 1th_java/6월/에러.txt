@@ -1,0 +1,10 @@
+1) reached end of file => 중괄호 에러 : {} 체크하거나 갯수 확인
+2) incompatible types => 강제형변환 안했을 때
+3) cannot find symbol => 변수선언 안하고 사용할 때
+4) vaiable aa might not have been initialized => 변수초기화 안했을때 : 값 대입
+5) ; expected => ; 안 붙였을 때
+6) 기본 클래스를 찾거나 로드할 수 없습니다 => 클래스 이름과 파일명이 다를때
+7)arrayIndexOutOfBouandsException => 배열방의 갯수범위 벗어남 : 방갯수=데이터 갯수 체크
+8)
+9)
+10)

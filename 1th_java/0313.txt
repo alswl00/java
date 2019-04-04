@@ -1,0 +1,18 @@
+javac, java:C:\Program Files\Java\jdk1.8.0_91\bin
+
+근데 나는 아무데서나 아무데서나 실행하구 싶어.
+javac, java
+c:\ >javac
+c:\work>javac
+
+path를 건다: 어디서든 실행하고 싶을때 설정하는 것
+
+이름: JAVA_HOME
+값: C:\Program Files\Java\jdk1.8.0_91
+
+이름: path
+값: %JAVA_HOME%\bin;
+
+
+
+
