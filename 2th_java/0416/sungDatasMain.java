@@ -1,8 +1,8 @@
-import java.io.*;
+﻿import java.io.*;
 import java.util.*;
 class sungDatasExam {
 	public void readingData(String fname) throws IOException{
-		try {
+		try { 
 			FileReader fr=new FileReader(new File(fname));
 			BufferedReader br=new BufferedReader(fr);
 			String csvStr="";
