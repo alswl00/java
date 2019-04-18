@@ -16,7 +16,7 @@ class sungDataRWExam {
 			bw=new BufferedWriter(fw);
 			for(int i=0;i<length;i++) {
 				bw.write(name[i]+"\t"+address[i]+"\t"+math[i]+"\t"+english[i]+"\t"+total[i]+"\t"+avg[i]);
-				bw=newLine();
+				bw.newLine();
 			}
 			bw.close();
 			fw.close();
@@ -34,21 +34,31 @@ class sungDataRWExam {
 				tmpStr=br.readLine();
 				if(tmpStr!=null) {
 					csvStr+=tmpStr+"\t";
-					
-					
-					
 				}
+			}while(tmpStr!=null);
+			StringTokenizer parse=new StringTokenizer(csvStr,"\t");
+			length=parse.countTokens()/4;
+			for(int i=0;i<length;i++) {
+				name[i]=parse.nextToken();
+				address[i]=parse.nextToken();
+				math[i]=Double.valueOf(parse.nextToken()).doubleValue();
+				english[i]=Double.valueOf(parse.nextToken()).doubleValue();
+				total[i]=math[i]+english[i];
+				avg[i]=total[i]/2.0;
 			}
 		} catch (FileNotFoundException e) {
-			// TODO: handle exception
+			System.out.println("잘못된 파일 이름을 입력했습니다.");
 		}
 	}
 }
-public class WritingDatasMain {
-
+class WritingDatasMain {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		sungDataRWExam wd=new sungDataRWExam();
+		try {
+			wd.readingData("writed.txt");
+			wd.writingData("writing.txt", false);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-
 }
